@@ -1,14 +1,20 @@
 package edu.eci.ieti.SpringBootRestAPI.data;
 
+import java.util.Date;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonFormat.Shape;
+
+
 public class User {
 
     private String id;
     private String name;
     private String email;
     private String lastName;
-    private String createdAt;
+    @JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd")
+    private Date createdAt;
 
-    public User(String id, String name, String email, String lastName, String createdAt) {
+    public User(String id, String name, String email, String lastName, Date createdAt) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -46,11 +52,11 @@ public class User {
         this.lastName = lastName;
     }
 
-    public String getCreatedAt() {
+    public Date getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(String createdAt) {
+    public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
     }
 
