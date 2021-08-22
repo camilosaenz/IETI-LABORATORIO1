@@ -1,14 +1,14 @@
 ## Spring Boot Rest API
 
-**Learning Objectives**
-
 **Rubian Camilo Saenz Rodriguez**
 **IETI - 2021-2**
+
+**Learning Objectives**
 
 - Explain what needs to be donde to achieve the Level 2 on a  RESTFUL API on the Richardson Maturity Model.
 - Implement a Level 2 Users RESTFUL API Microservice.
 - Implement a Level 2 Tasks RESTFUL API Microservice.
--  User dependencies injections to create a decoupled architecture.
+- User dependencies injections to create a decoupled architecture.
 
 
 ## Growth Mindset 🤹🏽
