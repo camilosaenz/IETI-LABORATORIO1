@@ -1,9 +1,9 @@
-<img align="right" src="https://github.com/ada-school/module-template/blob/main/ada.png">
-
-
 ## Spring Boot Rest API
 
 **Learning Objectives**
+
+**Rubian Camilo Saenz Rodriguez**
+**IETI - 2021-2**
 
 - Explain what needs to be donde to achieve the Level 2 on a  RESTFUL API on the Richardson Maturity Model.
 - Implement a Level 2 Users RESTFUL API Microservice.
@@ -32,6 +32,9 @@
   * Use either *Java* or *Kotlin* as programming language.
   * Use Gradle as project option(if your computer is slow then use  Maven)
   * Add Spring Web dependency before generating the project.
+
+<img src="https://github.com/camilosaenz/IETI-LABORATORIO1/blob/main/images/Spring%20initializr.png?raw=true">
+
 2. Create a new repository on Github and commit the files generated in 1.
 3. Create a new package called *dto* and inside define your *UserDto* object with at least the following fields:
     * name.
@@ -218,6 +221,39 @@
   ```
 
 12. Download and install [Postman](https://www.postman.com/) and test ALL the endpoints of your API.
+
+Primero mediante el metodo GET se observa que de momento esta vacia la lista de usuarios.
+
+<img src="https://github.com/camilosaenz/IETI-LABORATORIO1/blob/main/images/getUser.png?raw=true">
+
+Se verifica el metodo all().
+
+<img src="https://github.com/camilosaenz/IETI-LABORATORIO1/blob/main/images/getAll.png?raw=true">
+
+Se crea un usuario mediante el metodo create al realizar una solicitud POST.
+
+<img src="https://github.com/camilosaenz/IETI-LABORATORIO1/blob/main/images/create.png?raw=true">
+
+Se verifica en la lista de usuarios mediante una solicitud GET.
+
+<img src="https://github.com/camilosaenz/IETI-LABORATORIO1/blob/main/images/getUser-1.png?raw=true">
+
+Se modifica algunos campos del usuario mediante el metodo update utilizando el id del usuario como parametro en la url, gracias a una solicitud PUT.
+
+<img src="https://github.com/camilosaenz/IETI-LABORATORIO1/blob/main/images/update.png?raw=true">
+
+Se verifica en la lista de usuarios que si se hubiera modificado la información del usuario mediante una solicitud GET.
+
+<img src="https://github.com/camilosaenz/IETI-LABORATORIO1/blob/main/images/getUser-1.1.png?raw=true">
+
+ Se elimina el usuario indicando su id en la url dado como parametro mediante el metodo deleteById y ademas gracias a una solicitud delete.
+
+<img src="https://github.com/camilosaenz/IETI-LABORATORIO1/blob/main/images/delete.png?raw=true">
+
+Se verifica que el usuario ha sido eliminado de la lista de usuarios.
+
+<img src="https://github.com/camilosaenz/IETI-LABORATORIO1/blob/main/images/getUser-1.2.png?raw=true">
+
 ### Part 2: Implementing the Tasks Microservice RESTFUL API
 
 1. Create a new project using the [Spring Initializr](https://start.spring.io/)
