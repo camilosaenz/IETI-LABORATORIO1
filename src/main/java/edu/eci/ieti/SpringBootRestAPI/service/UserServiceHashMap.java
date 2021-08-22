@@ -1,6 +1,6 @@
-package edu.eci.ieti.service;
+package edu.eci.ieti.SpringBootRestAPI.service;
 
-import edu.eci.ieti.data.User;
+import edu.eci.ieti.SpringBootRestAPI.data.User;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

@@ -1,7 +1,7 @@
-package edu.eci.ieti.controller;
+package edu.eci.ieti.SpringBootRestAPI.controller;
 
-import edu.eci.ieti.data.User;
-import edu.eci.ieti.service.UserService;
+import edu.eci.ieti.SpringBootRestAPI.data.User;
+import edu.eci.ieti.SpringBootRestAPI.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +15,7 @@ public class UserController {
 
     private final UserService userService;
 
-    public UserController(UserService userService ){
+    public UserController(@Autowired UserService userService ){
         this.userService = userService;
     }
 

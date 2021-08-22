@@ -1,4 +1,4 @@
-package edu.eci.ieti.data;
+package edu.eci.ieti.SpringBootRestAPI.data;
 
 public class User {
 
