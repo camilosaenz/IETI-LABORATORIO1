@@ -226,10 +226,6 @@ Primero mediante el metodo GET se observa que de momento esta vacia la lista de 
 
 <img src="https://github.com/camilosaenz/IETI-LABORATORIO1/blob/main/images/getUser.png?raw=true">
 
-Se verifica el metodo all().
-
-<img src="https://github.com/camilosaenz/IETI-LABORATORIO1/blob/main/images/getAll.png?raw=true">
-
 Se crea un usuario mediante el metodo create al realizar una solicitud POST.
 
 <img src="https://github.com/camilosaenz/IETI-LABORATORIO1/blob/main/images/create.png?raw=true">
@@ -238,13 +234,13 @@ Se verifica en la lista de usuarios mediante una solicitud GET.
 
 <img src="https://github.com/camilosaenz/IETI-LABORATORIO1/blob/main/images/getUser-1.png?raw=true">
 
-Se modifica algunos campos del usuario mediante el metodo update utilizando el id del usuario como parametro en la url, gracias a una solicitud PUT.
+Se modifica algunos campos del usuario mediante el metodo update utilizando el id del usuario como parametro en la url, gracias a una solicitud PUT, para esto es necesario colocar en la url el nuevo ID generado para UserDto.
 
 <img src="https://github.com/camilosaenz/IETI-LABORATORIO1/blob/main/images/update.png?raw=true">
 
 Se verifica en la lista de usuarios que si se hubiera modificado la información del usuario mediante una solicitud GET.
 
-<img src="https://github.com/camilosaenz/IETI-LABORATORIO1/blob/main/images/getUser-1.1.png?raw=true">
+<img src="https://github.com/camilosaenz/IETI-LABORATORIO1/blob/main/images/getUser-2.png?raw=true">
 
  Se elimina el usuario indicando su id en la url dado como parametro mediante el metodo deleteById y ademas gracias a una solicitud delete.
 
@@ -252,65 +248,4 @@ Se verifica en la lista de usuarios que si se hubiera modificado la información
 
 Se verifica que el usuario ha sido eliminado de la lista de usuarios.
 
-<img src="https://github.com/camilosaenz/IETI-LABORATORIO1/blob/main/images/getUser-1.2.png?raw=true">
-
-### Part 2: Implementing the Tasks Microservice RESTFUL API
-
-1. Create a new project using the [Spring Initializr](https://start.spring.io/)
-  * Use either *Java* or *Kotlin* as programming language.
-  * Use Gradle as project option(if your computer is slow then use  Maven)
-  * Add Spring Web dependency before generating the project.
-2. Create a new repository on Github and commit the files generated in 1.
-3. Create a new package called *dto* and inside define your *TaskDto* object with at least the following fields:
-    * name.
-    * description.
-    * status [TODO, DOING, REVIEW and DONE].
-    * assignedTo.
-    * dueDate.
-    * created.
-4. Create a new package called *data* and inside define your *Task* data object with at least the following fields:
-    * id.
-    * name.
-    * description.
-    * status [TODO, DOING, REVIEW and DONE].
-    * assignedTo.
-    * dueDate.
-    * created.
-5. Create a new package called *service* an inside create the following interface:
-
-**Java:**
- ```java
-     public interface TaskService
-     {
-         Task create( Task task );
-
-         Task findById( String id );
-         
-         List<Task> all();
-
-         void deleteById( String id );
-
-         Task update( Task task, String id );
-     }
-  ```
-  **Kotlin:**
-  ```kotlin
-      interface TaskService {
-
-         fun create( task: Task): Task
-
-         fun findById( String id ): Task?
-         
-         fun  all(): List<Task>
-
-         fun deleteById( String id )
-
-         fun update( Task task, String id ): Task
-
-      }
-  ```
-6. Create an implementation of the TaskService using a HashMap data structure inside.
-7. Make your service implementation *TaskServiceHashMap* injectable using the *@Service* annotation.
-8. Implement you *TaskController* (try to avoid copy paste, use the User Microservice as reference but try doing it consciously).
-9. Test ALL the endpoints of your API using PostMan or any other tool of your preference.
-
+<img src="https://github.com/camilosaenz/IETI-LABORATORIO1/blob/main/images/getUser-3.png?raw=true">
