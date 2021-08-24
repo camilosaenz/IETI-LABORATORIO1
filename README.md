@@ -222,6 +222,8 @@
 
 12. Download and install [Postman](https://www.postman.com/) and test ALL the endpoints of your API.
 
+Toda la información sobre las pruebas realizadas en Postman estan en el siguiente enlace: [Postman](https://github.com/camilosaenz/IETI-LABORATORIO1/blob/main/IETI%20-%20LABORATORIO%201.postman_collection.json)
+
 Primero mediante el metodo GET se observa que de momento esta vacia la lista de usuarios.
 
 <img src="https://github.com/camilosaenz/IETI-LABORATORIO1/blob/main/images/getUser.png?raw=true">
