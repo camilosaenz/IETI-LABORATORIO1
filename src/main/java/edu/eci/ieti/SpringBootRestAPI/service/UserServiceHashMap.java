@@ -14,7 +14,11 @@ public class UserServiceHashMap implements UserService{
 
     @Override
     public User create(User user) {
-        return usersMap.put(user.getId(), user);
+        if (usersMap.containsKey(user.getId())) {
+            throw new RuntimeException("El Usuario ya Existe!");
+        }
+        usersMap.put(user.getId(), user);
+        return usersMap.get(user.getId());
     }
 
     @Override
@@ -30,11 +34,20 @@ public class UserServiceHashMap implements UserService{
 
     @Override
     public void deleteById(String id) {
-        usersMap.remove(id);
+        if(usersMap.containsKey(id)){
+            usersMap.remove(id);
+        }else{
+            throw new RuntimeException("El Usuario no Existe!");
+        }
     }
 
     @Override
     public User update(User user, String userId) {
-        return usersMap.put(userId, user);
+        if (!usersMap.containsKey(userId)) {
+            throw new RuntimeException("El Usuario no Existe!");
+        }
+        deleteById(userId);
+        return create(user);
     }
+
 }

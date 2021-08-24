@@ -1,9 +1,10 @@
 package edu.eci.ieti.SpringBootRestAPI.data;
 
 import java.util.Date;
+import java.util.UUID;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonFormat.Shape;
-
+import edu.eci.ieti.SpringBootRestAPI.dto.UserDto;
 
 public class User {
 
@@ -20,6 +21,22 @@ public class User {
         this.email = email;
         this.lastName = lastName;
         this.createdAt = createdAt;
+    }
+
+    public User(UserDto userDto) {
+        this.id = UUID.randomUUID().toString();
+        this.name = userDto.getName();
+        this.email = userDto.getEmail();
+        this.lastName = userDto.getLastName();
+        this.createdAt = userDto.getCreatedAt();
+    }
+
+    public User(UserDto userDto, String id) {
+        this.id = id;
+        this.name = userDto.getName();
+        this.email = userDto.getEmail();
+        this.lastName = userDto.getLastName();
+        this.createdAt = userDto.getCreatedAt();
     }
 
     public String getId() {
